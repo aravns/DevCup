@@ -1,0 +1,40 @@
+header {
+    background: #131313;
+    padding: 10px 5px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul.li-1 {
+    display: flex;
+}
+
+header ul.li-2 {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+header ul.li-2 a {
+    margin-right: 20px;
+}
+
+header ul.li-3 {
+    display: flex;
+}
+header ul.li-3 button {
+    margin-right: 25px;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: green;
+    border: none;
+}
+
+a {
+    color: #fff;
+    list-style: none;
+}
