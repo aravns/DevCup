@@ -1,1 +1,1 @@
-**https://aravns.github.io/DevCup/**
+**https://aravns.github.io/DevCup/devfront/index.html**
