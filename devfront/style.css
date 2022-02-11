@@ -7,6 +7,7 @@
     --btn-color: rgb(86,224,108);
     /* Var font-size */
     --dev: 100px;
+    --navbar-font-size: 20px;
 }
 
 
@@ -49,6 +50,7 @@ header {
     justify-content: space-between;
     box-shadow: 0px 10px 5px 1px #15141482;
     z-index: 100;
+    font-size: var(--navbar-font-size)
 }
 
 header .li-1 {
@@ -82,7 +84,14 @@ a {
     list-style: none;
 }
 
-
+@media all and (max-width: 500px) {
+    :root {
+        --navbar-font-size: 10px;
+    }
+    header {
+        margin-bottom: 100px;
+    }
+}
 
 /* ===============[body]=============== */
 .container {
@@ -104,12 +113,15 @@ a {
 }
 
 .container .d-1 div {
+    background-color: #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     transform: translate(15px,-15px);
     bottom: 0;
     width: var(--dev);
     height: var(--dev);
-    background-color: red;
     /* margin: 100px; */
     display: inline-block;
     border-radius: 50%;
