@@ -25,7 +25,7 @@ class Header extends React.Component {
                     <button>Sing Up</button>
                 </ul>
             </header>
-      );
+        );
     }
   
 }
