@@ -48,8 +48,9 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 10px 5px 1px #15141482;
-    z-index: 100;
-    font-size: var(--navbar-font-size)
+    font-size: var(--navbar-font-size);
+    z-index: 10;
+    position: fixed;
 }
 
 header .li-1 {
@@ -96,6 +97,7 @@ a {
 .container {
     width: 100%;
     padding: 100px 20%;
+    z-index: -2;
 }
 
 .container .d-1 {
@@ -108,7 +110,7 @@ a {
     border-bottom-left-radius: 270px;
     /* border-bottom-right-radius: 200px; */
     background-color: gray;
-    z-index: -1;
+    z-index: 3;
 }
 
 .container .d-1 div {
@@ -121,10 +123,9 @@ a {
     bottom: 0;
     width: var(--dev);
     height: var(--dev);
-    /* margin: 100px; */
     display: inline-block;
     border-radius: 50%;
-    z-index: 100000;
+    transition: all 0.5s;
 }
 .container .d-1 div img {
     width: var(--dev);
