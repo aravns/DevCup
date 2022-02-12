@@ -95,7 +95,7 @@ a {
 /* ===============[body]=============== */
 .container {
     width: 100%;
-    padding: 100px;
+    padding: 100px 20%;
 }
 
 .container .d-1 {
