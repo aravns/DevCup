@@ -1,21 +1,28 @@
+var toggleBtn = document.getElementsByClassName('toggle-btn')[0];
+var navContent = document.getElementsByClassName('nav-content')[0];
+
+toggleBtn.addEventListener('click', () => {
+    navContent.classList.toggle('active');
+});
+
 var div = document.getElementById('div');
-var dadeDiv = document.getElementsByClassName('d-1')[0];
-var childe = document.getElementsByClassName('childeOfDade');
+var developers = document.getElementsByClassName('developers')[0];
+var dev = document.getElementsByClassName('dev');
+
+console.log(`x=${window.innerWidth}, y=${window.innerHeight}`)
 
 
-div.onmousemove = (e) => {
-    div.style.transform = 
-    `translate(${e.layerX}px, ${e.layerY}px)`
-    console.log('lala');
-}
-div.onmouseout = () => {
-    div.style.transform = `translate(0, 0)`;
-}
 var x = []
-for (let i = 0; i< Object.keys(childe).length; i++) {
-    x.push(dadeDiv.children[i])
+for (let i = 0; i< Object.keys(dev).length; i++) {
+    x.push(developers.children[i])
 }
 
 x.map((i) => {
-    i.onmousemove()
+    i.onmousemove = (e) => {
+        i.style.transform= `translate(${e.layerX}px, ${e.layerY}px)`;
+        console.log(e.layerY)
+    }
+    // i.onmouseout = () => {
+    //     i.style.transform = `translate(0, 0)`;
+    // }
 })

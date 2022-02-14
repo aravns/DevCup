@@ -15,6 +15,7 @@
 
 /* ===============[index]=============== */
 * {
+    transition: all 0.5s;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -32,16 +33,21 @@ body {
     height: 100vh;
     width: 100%;
     overflow: scroll;
-    color: var(--tx-color)
+    color: var(--tx-color);
+    /* display: flex; */
+}
+
+a {
+    color: #fff;
+    list-style: none;
 }
 
 
-
-
 /* ===============[navbar]=============== */
-header {
+.navbar {
     background: var(--navbar-color);
     padding: 10px 20px;
+    min-height: 50px;
     width: 100%;
     color: #fff;
     display: flex;
@@ -51,25 +57,46 @@ header {
     font-size: var(--navbar-font-size);
     z-index: 10;
     position: fixed;
+    top: 0;
+    left: 0;
 }
 
-header .li-1 {
+.navbar .title {
     display: flex;
 }
-
-header .li-2 {
+.navbar .toggle-btn {
+    position: absolute;
+    top: .55rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    width: 40px;
+}
+.navbar .toggle-btn span {
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+}
+.navbar .nav-content {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+.navbar .nav-content .links {
     display: flex;
     height: 100%;
     align-items: center;
 }
-header .li-2 a {
+.navbar .nav-content .links li {
     margin-right: 30px;
 }
+.navbar .nav-content .login-btn {
 
-header .li-3 {
-    display: flex;
 }
-header .li-3 button {
+.navbar .nav-content .login-btn button {
     margin-right: 25px;
     width: 70px;
     height: 30px;
@@ -79,41 +106,30 @@ header .li-3 button {
     border: none;
 }
 
-a {
-    color: #fff;
-    list-style: none;
-}
 
-@media all and (max-width: 500px) {
-    :root {
-        --navbar-font-size: 10px;
-    }
-    header {
-        margin-bottom: 400px;
-    }
+
+
+.clear {
+    height: 100px;
 }
 
 /* ===============[body]=============== */
 .container {
     width: 100%;
-    padding: 100px 20%;
     z-index: -2;
 }
-
-.container .d-1 {
+.container .developers {
     position: absolute;
     top: 0;
     right: 0;
-    /* transform: translateY(-0px); */
+    transform: translateY(-0px);
     width: 500px;
     height: 400px;
     border-bottom-left-radius: 270px;
-    /* border-bottom-right-radius: 200px; */
     background-color: gray;
     z-index: 3;
 }
-
-.container .d-1 div {
+.container .developers div {
     background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
@@ -127,17 +143,15 @@ a {
     border-radius: 50%;
     transition: all 0.5s;
 }
-.container .d-1 div img {
-    width: var(--dev);
-    height:  var(--dev);
-    border-radius: 50%;
+.container .content {
+    width: 80%;
+    margin: auto;
+    display: block
 }
-
-.container .d-2 span {
+.container .content span {
     color: #C2C2C2;
 }
-
-.container .d-2 button {
+.container .content a button {
     font-size: 15px;
     color: #fff;
     font-weight: 1000;
